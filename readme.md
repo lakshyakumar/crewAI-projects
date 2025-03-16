@@ -41,11 +41,17 @@ This project is designed for AI agents that take and summarize meeting minutes.
 
 - [pyproject.toml](04_meeting_minutes/pyproject.toml)
 
-### pdf_rag
+### 05_pdf_rag
 
-This project is designed for AI agents to caht with a pdf.
+This project is designed for AI agents to chat with a pdf.
 
-- [pyproject.toml](pdf_rag/pyproject.toml)
+- [pyproject.toml](05_pdf_rag/pyproject.toml)
+
+### 06_business_development
+
+This project is designed for generating a business development report.
+
+- [pyproject.toml](06_business_development/pyproject.toml)
 
 ## Installation
 

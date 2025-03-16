@@ -1,0 +1,44 @@
+market_research_analysis_task:
+  description: >
+    Analyze the market demand for product {product_name} which is {description}.
+    write a report on ideal customer profile and strategies to reach the widest possible audience.
+    Include at least 10 points addressing key market trends and demands.
+    create a list of key features required in the project as per the current and future trends and demands.
+    Make sure you find any interesting and relevant information.
+  expected_output: >
+    report on ideal customer profile and strategies and At least 10 points addressing 
+    key market trends and demands {product_name}, give key features required in the project.
+  agent: market_research_analyst_agent
+
+tech_expert_task:
+  description: >
+    Assess the technological feasibility and requirements for developing high-quality 
+    {product_name} which is {description}. Write a report detailing necessary
+    technologies and development approaches.
+    Include at least 10 points addressing key technological areas.
+  expected_output: >
+    report detailing necessary technologies and manufacturing approaches for {product_name}.
+    Including at least 10 points addressing key technological areas.
+    Give the best possible timeline from development to production starting from {date}.
+  agent: tech_expert_agent
+
+business_consulting_task:
+  description: >
+    Summarize the market and technological reports and evaluate the business model 
+    for {product_name} which is {description}. Write a report on the scalability and revenue streams
+    for the product. Include at least 10 points addressing key business areas.
+  expected_output: >
+    report on the scalability and revenue streams for the product {product_name}.
+    for the product. Include at least 10 points addressing key business areas.
+    give the best possible timeline for the product launch starting from {date}.
+  agent: business_consultant_agent
+
+file_writer_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information.
+  expected_output: >
+    A fully fledged report with the main topics, each with a full section of 
+    information in file into a file reports/{date}_{product}_report_article.md.
+    Formatted as markdown without '```'
+  agent: file_writer
