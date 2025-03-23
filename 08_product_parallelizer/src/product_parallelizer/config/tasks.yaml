@@ -1,0 +1,45 @@
+retrieve_product_task:
+  description: >
+    Conduct a thorough research about product {product}
+    Make sure you find any interesting and relevant information on their use cases, features
+    and technological advancements.
+  expected_output: >
+    A list with {number_of_websites} website with the most relevant information about product {product}
+  agent: retrieve_product
+
+website_scraper_task:
+  description: >
+    Scrape the website for the latest features and technological information on product {product}.
+  expected_output: >
+    fully scrape the website with all important and relevant information about {product}
+    features and technologies.
+  agent: website_scraper
+
+product_analyzer_task:
+  description: >
+    Write the report as business feature writer about product {product}.
+    Review the context you got and expand each feature into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information.
+    Summarize the information from the websites into a fully fledge report in markdown format.
+  expected_output: >
+    A fully fledge business report with the main topics, each with a full section of information.
+    Formatted as markdown without '```'
+  agent: product_analyzer_agent
+
+tech_analyzer_task:
+  description: >
+    Write the technological report about {product}.
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information.
+    Summarize the information from the websites into a fully fledge tech report in markdown format.
+  expected_output: >
+    A fully fledge report with the main topics, each with a full section of information.
+    Formatted as markdown without '```'
+  agent: tech_analyzer_agent
+
+file_writer_task:
+  description: >
+    Write the report to a file
+  expected_output: >
+    A fully fledged report with all information from previous task into a file report/{date}_{product}_report.md
+  agent: file_writer

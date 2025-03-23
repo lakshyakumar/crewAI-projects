@@ -1,0 +1,47 @@
+research_task:
+  description: >
+    Analyze the requirement {feature} for the product {product}.
+    Analyze the teh technological trends and demands around the 
+    {feature} in {product} market. come with a requirement for the {feature},
+    analyzing the market and requirements around it.
+    Make sure you find any interesting and relevant information.
+  expected_output: >
+    Research report in descriptive form with the requirements for the {feature} in {product}.
+  agent: researcher
+
+tech_expert_task:
+  description: >
+    Assess the technological feasibility and requirements for developing high-quality 
+    feature {feature} in product {product}. Write a report detailing necessary
+    technologies and development requirements based on the research report from 
+    researcher around the feature.
+  expected_output: >
+    create a descriptive list of step by step features and technologies required for 
+    the {feature} in {product}, with clear descriptions, estimates, blockers and requirements.
+  agent: tech_expert_agent
+
+sprint_planing_task:
+  description: >
+    summarize all the reports and list from other two agents and create a list of epic, 
+    stories and features for the next sprint. make sure to go as granular as possible for a 
+    two weeks sprint for the feature {feature} in {product}.
+  expected_output: >
+    a descriptive list of Epics, stories and tasks for the development team for the next sprint.
+    Each task needs to be under story and each story under epic and it cannot be more than 45 hours per story
+    summing the original estimates of all the tasks under it, each task can be up to 18 hours.
+    breakdown the story into multiples where required.
+    with clear descriptions, estimates in number of hours, blockers, acceptance criteria 
+    -and requirements.
+  agent: sprint_master_agent
+
+file_writer_task:
+  description: >
+    Review the list of stories and tasks under them from the sprint master with summary, description, 
+    and estimates, and write it to a file. Make sure to include all the necessary
+    information for the development team to understand and act on the information.
+    with clear acceptance criteria and requirements.
+  expected_output: >
+    A fully fledged list with the clear description, summary, original estimates in hours 
+    into a file reports/{product}_tasks.md.
+    Formatted as markdown without '```'
+  agent: file_writer

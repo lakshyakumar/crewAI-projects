@@ -1,0 +1,23 @@
+[project]
+name = "product_parallelizer"
+version = "0.1.0"
+description = "product_parallelizer using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.105.0,<1.0.0"
+]
+
+[project.scripts]
+product_parallelizer = "product_parallelizer.main:run"
+run_crew = "product_parallelizer.main:run"
+train = "product_parallelizer.main:train"
+replay = "product_parallelizer.main:replay"
+test = "product_parallelizer.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

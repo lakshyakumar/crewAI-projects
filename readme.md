@@ -53,6 +53,24 @@ This project is designed for generating a business development report.
 
 - [pyproject.toml](06_business_development/pyproject.toml)
 
+### 06_sprint_master
+
+This project is designed for generating a list for tasks for given feature in sprint.
+
+- [pyproject.toml](06_business_development/pyproject.toml)
+
+### 06_product_parallelizer
+
+This project is designed for getting a product details from web.
+
+- [pyproject.toml](06_business_development/pyproject.toml)
+
+### 09_project_plan
+
+This project is designed for planning a product with different resources.
+
+- [pyproject.toml](06_business_development/pyproject.toml)
+
 ## Installation
 
 Ensure you have Python 3.12 installed on your system.
